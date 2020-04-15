@@ -54,7 +54,7 @@ app.get("/weather", (req, res) => {
                     error: error
                 })
         }
-        geocode.weather(latitude,longitude, (error, {description, temperature, feelslike} = {})=> { // With Destructuring
+        geocode.weather(latitude,longitude, (error, {description, temperature, feelslike, humidity} = {})=> { // With Destructuring
                 if(error) {
                         return res.send({
                             error: error
@@ -62,7 +62,7 @@ app.get("/weather", (req, res) => {
                 }
                 res.send({
                     description: description,
-                    statement: "It is currently " + temperature + " degrees out, and feels like " + feelslike + " degrees in " + req.query.address
+                    statement: "It is currently " + temperature + " degrees out, and feels like " + feelslike + " degrees, Humidity is at: " + humidity +" in " + req.query.address
                 })
         })
     })
