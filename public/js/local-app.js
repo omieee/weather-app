@@ -8,7 +8,7 @@ errormessage = document.querySelector('#error-message')
 formselector.addEventListener('submit', (e) => {
     e.preventDefault()
     inputval = inputselector.value
-    fetch("http://localhost:3000/weather?address=" + inputval).then((response) => {
+    fetch("/weather?address=" + inputval).then((response) => {
         response.json().then((data) => {
             errormessage.textContent = ""
             message1.textContent = ""
