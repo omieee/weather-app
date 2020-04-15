@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+}
+
+img {
+    width: 250px;
+}
+
+a{
+    color: #efef3d;
+}
+
+#message-1, #message-2 {
+    color: green;
+}
+
+#error-message {
+    color: red;
+}
